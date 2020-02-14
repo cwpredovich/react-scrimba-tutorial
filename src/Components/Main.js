@@ -1,8 +1,16 @@
 import React from "react";
 
+
 function Main() {
     return (
-        <div>Main</div>
+        <form>
+            <ul>
+                <li><input type="checkbox"></input></li>
+                <li><input type="checkbox"></input></li>
+                <li><input type="checkbox"></input></li>
+                <li><input type="checkbox"></input></li>
+            </ul>
+        </form>
     )
 }
 
