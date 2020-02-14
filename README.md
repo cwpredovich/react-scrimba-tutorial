@@ -1,4 +1,5 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This repository contains all of the code I wrote while working through Bob Ziroll's interactive ReactJS video tutorial hosted by Scrimba.io
+The tutorial is available here:  https://scrimba.com/g/glearnreact
 
 ## Available Scripts
 
