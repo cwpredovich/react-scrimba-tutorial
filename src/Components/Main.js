@@ -4,7 +4,10 @@ import React from "react";
 function Main() {
     const date = new Date();
     const hours = date.getHours();
-    let timeOfDay
+    let timeOfDay;
+    const styles = {
+        fontSize: 30
+    }
 
     if (hours < 12) {
         timeOfDay = "morning";
@@ -17,14 +20,19 @@ function Main() {
     return (
         <div>
             <p>Good {timeOfDay}!</p>
-            <form>
-                <ul className="list">
-                    <li><input type="checkbox"></input></li>
-                    <li><input type="checkbox"></input></li>
-                    <li><input type="checkbox"></input></li>
-                    <li><input type="checkbox"></input></li>
-                </ul>
-            </form>
+            <div>
+                <input type="checkbox" />
+                <p>Placeholder text here</p>
+            
+                <input type="checkbox" />
+                <p>Placeholder text here</p>
+            
+                <input type="checkbox" />
+                <p>Placeholder text here</p>
+            
+                <input type="checkbox" />
+                <p>Placeholder text here</p>
+            </div>
         </div>
     )
 }
