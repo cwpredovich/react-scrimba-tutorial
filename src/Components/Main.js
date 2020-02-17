@@ -1,37 +1,32 @@
 import React from "react";
+import TodoItem from "./TodoItem";
 
 
 function Main() {
     const date = new Date();
     const hours = date.getHours();
     let timeOfDay;
-    const styles = {
-        fontSize: 30
-    }
+    let styles = {};
 
     if (hours < 12) {
         timeOfDay = "morning";
+        styles = {backgroundColor: "green"};
     } else if (hours >= 12 && hours < 17) {
         timeOfDay = "afternoon";
+        styles = {backgroundColor: "yellow"};
     } else {
         timeOfDay = "evening";
+        styles = {backgroundColor: "pink"};
     };
 
     return (
         <div>
-            <p>Good {timeOfDay}!</p>
+            <p style={styles}>Good {timeOfDay}!</p>
             <div>
-                <input type="checkbox" />
-                <p>Placeholder text here</p>
-            
-                <input type="checkbox" />
-                <p>Placeholder text here</p>
-            
-                <input type="checkbox" />
-                <p>Placeholder text here</p>
-            
-                <input type="checkbox" />
-                <p>Placeholder text here</p>
+                <TodoItem />
+                <TodoItem />
+                <TodoItem />
+                <TodoItem />
             </div>
         </div>
     )
