@@ -1,10 +1,17 @@
 import React from "react";
 
 function Product(props) {
+
+    function giveDetails() {
+        alert(props.product.description)
+    }
+
     return(
         <div className="indivProd">
             <h4>{props.product.name}</h4>
-            {props.product.price.toLocaleString("en-US", { style: "currency", currency: "USD" })} - {props.product.description}
+            <button onClick={giveDetails}>
+                {props.product.price.toLocaleString("en-US", { style: "currency", currency: "USD" })}
+            </button>
         </div>
     )
 }
