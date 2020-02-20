@@ -2,7 +2,8 @@ import React from "react";
 
 function Product(props) {
 
-    function giveDetails() {
+    function giveDetails(e) {
+        e.preventDefault();
         alert(props.product.description)
     }
 

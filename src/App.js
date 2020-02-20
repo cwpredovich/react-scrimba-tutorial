@@ -8,10 +8,10 @@ import Products from "./Components/Products";
 function App() {
   return(
     <div>
-      <Header />
-      {/* <Main /> */}
-      <Products />
-      <Footer />
+      {/* <Header /> */}
+      <Main />
+      {/* <Products /> */}
+      {/* <Footer /> */}
     </div>
   )
 };
