@@ -1,7 +1,6 @@
 import React from "react";
 import TodoItem from "./TodoItem";
 
-
 function Main() {
     const date = new Date();
     const hours = date.getHours();
@@ -22,7 +21,7 @@ function Main() {
     return (
         <div>
             <p style={styles}>Good {timeOfDay}!</p>
-            <div>
+            <div className="todo-list">
                 <TodoItem />
                 <TodoItem />
                 <TodoItem />
