@@ -1,19 +1,26 @@
-import React from "react";
+import React, { Component } from "react";
 import TodoItem from "./TodoItem";
 import todosData from "./todosData.js";
 
-function Main() {
+class Main extends Component {
+    constructor() {
+        super();
+        this.state = {
+            currentToDoArr: todosData
+        };
+    };
 
-    const todoComponents = todosData.map(item => <TodoItem todo={item} key={item.id} />)
-
-    return (
-        <div>
-            <div className="todo-list">
-                {todoComponents}
+    render() {
+        const todoComponents = this.state.currentToDoArr.map(item => <TodoItem todo={item} key={item.id} />)
+        return (
+            <div>
+                <div className="todo-list">
+                    {todoComponents}
+                </div>
             </div>
-        </div>
-    )
-}
+        )
+    } ; 
+};
 
 export default Main;
 

@@ -17,11 +17,11 @@ const todosData = [
     {
         id: 4,
         text: "Mow lawn",
-        completed: true
+        completed: false
     },
     {
         id: 5,
-        text: "Catch up on Arrested Development",
+        text: "Catch up on latest TV show",
         completed: true
     }
 ]
