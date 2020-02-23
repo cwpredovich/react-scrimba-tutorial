@@ -8,10 +8,27 @@ class Main extends Component {
         this.state = {
             currentToDoArr: todosData
         };
+
+        this.handleChange = this.handleChange.bind(this);
+    };
+
+    handleChange(id) {
+        console.log(id)
+        this.setState(prevState => {
+            const updatedToDoArr = prevState.currentToDoArr.map(todo => {
+                if (todo.id === id) {
+                    todo.completed = !todo.completed;
+                };
+                return todo;
+            })
+            return {
+                currentToDoArr: updatedToDoArr
+            }
+        })
     };
 
     render() {
-        const todoComponents = this.state.currentToDoArr.map(item => <TodoItem todo={item} key={item.id} />)
+        const todoComponents = this.state.currentToDoArr.map(item => <TodoItem item={item} key={item.id} handleChange={this.handleChange} />)
         return (
             <div>
                 <div className="todo-list">
@@ -23,11 +40,3 @@ class Main extends Component {
 };
 
 export default Main;
-
-/*
-Let's practice props and mapping components on our todo list app!
-
-I've created a js file with some todos data in it, which I'm imported into this file. (Normally this data would come from an API call, not a local file). 
-
-Challenge: Using the array map method, render a child component for each todo item in the todosData array and pass the relevant data to it.
-*/
