@@ -8,17 +8,18 @@ class Main extends Component {
         this.state = {
             currentToDoArr: todosData
         };
-
         this.handleChange = this.handleChange.bind(this);
     };
 
     handleChange(id) {
-        console.log(id)
         this.setState(prevState => {
             const updatedToDoArr = prevState.currentToDoArr.map(todo => {
                 if (todo.id === id) {
-                    todo.completed = !todo.completed;
-                };
+                    return {
+                        ...todo,
+                        completed: !todo.completed
+                    }
+                }
                 return todo;
             })
             return {
